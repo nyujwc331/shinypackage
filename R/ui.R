@@ -2,7 +2,6 @@
 #'
 #' @import shiny
 #' @import ggplot2
-#' @import datasets
 
 # create the shiny application user interface
 ui <- fluidPage(

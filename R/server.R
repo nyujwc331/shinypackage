@@ -4,7 +4,6 @@
 #' @param output provided by shiny
 #'
 
-
 # Define server logic required to draw a histogram
 server <- function(input, output, session) {
 
@@ -31,7 +30,9 @@ server <- function(input, output, session) {
   #-- modularized server.
   callModule(counter, "counter1")
 
-  df <- callModule(linkedScatter, "scatters", reactive(mpg),
+  car_data <- reactive({mpg})
+
+  df <- callModule(linkedScatter, "scatters", car_data,
                    left = reactive(c("cty", "hwy")),
                    right = reactive(c("drv", "hwy"))
   )
