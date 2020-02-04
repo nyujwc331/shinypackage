@@ -28,17 +28,17 @@ server <- function(input, output, session) {
   })
 
   #-- modularized server.
-  # callModule(counter, "counter1")
-  #
-  # car_data <- reactive({mpg})
-  #
-  # df <- callModule(linkedScatter, "scatters", car_data,
-  #                  left = reactive(c("cty", "hwy")),
-  #                  right = reactive(c("drv", "hwy"))
-  # )
-  #
-  # output$summary <- renderText({
-  #   sprintf("%d observation(s) selected", nrow(dplyr::filter(df(), selected_)))
-  # })
+  callModule(counter, "counter1")
+
+  car_data <- reactive({mpg})
+
+  df <- callModule(linkedScatter, "scatters", car_data,
+                   left = reactive(c("cty", "hwy")),
+                   right = reactive(c("drv", "hwy"))
+  )
+
+  output$summary <- renderText({
+    sprintf("%d observation(s) selected", nrow(dplyr::filter(df(), selected_)))
+  })
 
 }

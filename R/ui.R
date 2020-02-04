@@ -16,14 +16,14 @@ pageWithSidebar(
                  min = 1, max = 9)
   ),
   mainPanel(
-    plotOutput('plot1')
+    plotOutput('plot1'),
 
     #-- modularized ui.
-    # counterUI("counter1", "Counter #1"),
-    #
-    # h2("Module example"),
-    # linkedScatterUI("scatters"),
-    # textOutput("summary")
+    counterUI("counter1", "Counter #1"),
+
+    h2("Module example"),
+    linkedScatterUI("scatters"),
+    textOutput("summary")
 
   )
 )
