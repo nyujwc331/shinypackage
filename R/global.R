@@ -3,6 +3,7 @@
 #' @import shiny
 #' @import ggplot2
 #' @import datasets
+#' @import graphics
 
 counterUI <- function(id, label = "Counter") {
   ns <- NS(id)

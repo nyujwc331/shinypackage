@@ -3,4 +3,5 @@
 export(launchApp)
 import(datasets)
 import(ggplot2)
+import(graphics)
 import(shiny)
