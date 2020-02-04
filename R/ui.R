@@ -18,11 +18,7 @@ pageWithSidebar(
     plotOutput('plot1'),
 
     counterButton("counter1", "Counter #1"),
-<<<<<<< HEAD
     counterButton("counter2", "Counter #2")
-=======
-    counterButton("counter1", "Counter #1")
->>>>>>> f4730ff9e6b86c8e396236d55216460f18afdefb
 
   )
 )
