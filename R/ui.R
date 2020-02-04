@@ -17,7 +17,8 @@ pageWithSidebar(
   mainPanel(
     plotOutput('plot1'),
 
-    counterButton("counter1", "Counter #1")
+    counterButton("counter1", "Counter #1"),
+    counterButton("counter2", "Counter #2")
 
   )
 )
