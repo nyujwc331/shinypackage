@@ -1,6 +1,7 @@
 #' Shiny app server object
 #'
 #' @import shiny
+#' @import ggplot2
 
 # create the shiny application user interface
 ui <- fluidPage(
@@ -17,8 +18,12 @@ pageWithSidebar(
   mainPanel(
     plotOutput('plot1'),
 
-    counterButton("counter1", "Counter #1"),
-    counterButton("counter2", "Counter #2")
+    #-- modularized ui.
+    counterUI("counter1", "Counter #1"),
+
+    h2("Module example"),
+    linkedScatterUI("scatters"),
+    textOutput("summary")
 
   )
 )

@@ -28,6 +28,16 @@ server <- function(input, output, session) {
     points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
   })
 
+  #-- modularized server.
   callModule(counter, "counter1")
+
+  df <- callModule(linkedScatter, "scatters", reactive(mpg),
+                   left = reactive(c("cty", "hwy")),
+                   right = reactive(c("drv", "hwy"))
+  )
+
+  output$summary <- renderText({
+    sprintf("%d observation(s) selected", nrow(dplyr::filter(df(), selected_)))
+  })
 
 }
