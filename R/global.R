@@ -1,3 +1,8 @@
+#' Shiny app server object
+#'
+#' @import shiny
+#' @import ggplot2
+
 counterUI <- function(id, label = "Counter") {
   ns <- NS(id)
   tagList(
