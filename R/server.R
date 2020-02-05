@@ -32,7 +32,7 @@ server <- function(input, output, session) {
 
   car_data <- reactive({mpg})
 
-  df <- callModule(linkedScatter, "scatters", reactive(car_data),
+  df <- callModule(linkedScatter, "scatters", car_data,
                    left = reactive(c("cty", "hwy")),
                    right = reactive(c("drv", "hwy"))
   )
