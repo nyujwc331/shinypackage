@@ -30,7 +30,7 @@ server <- function(input, output, session) {
   #-- modularized server.
   callModule(counter, "counter1")
 
-  car_data <- reactive({mpg})
+  car_data <- reactive({ggplot2::mpg})
 
   df <- callModule(linkedScatter, "scatters", car_data,
                    left = reactive(c("cty", "hwy")),
